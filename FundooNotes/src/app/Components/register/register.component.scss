@@ -1,0 +1,50 @@
+.image{
+    height: 200px;
+    width: 200px;
+}
+
+.head{
+    padding-left: 10px;
+  }
+
+form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #4e4c4c;
+    border-radius: 10px;
+    width: 750px;
+    padding: 25px;
+    background: rgb(255, 255, 255);
+  }
+
+  label{
+    position: relative;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(92, 88, 88);
+    font-size: 15px;
+    pointer-events: none;
+    left: 20px;
+    top: -28px;
+  }
+
+  .line{
+    font-size: 15px;
+    margin: 20px 8px;
+    color: #4971f6;
+    display: inline-block;
+    font-family: arial rounded mt;
+  }
+
+  input[type="submit"]{
+    background:  #4971f6;
+    color: #fff;
+    border: none;
+    padding:10px 30px;
+    border-radius: 5px;
+    margin:  40px 0 30px 180px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+ 
