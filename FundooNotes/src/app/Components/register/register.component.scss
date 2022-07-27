@@ -1,50 +1,85 @@
-.image{
-    height: 200px;
-    width: 200px;
+.Outerdiv{
+  border: 0px solid rgb(255, 253, 253);
+  height: 99vh;
+  width: 99vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.head{
-    padding-left: 10px;
-  }
+.main{
+  border: 1px solid grey; 
+  border-radius: 4px;
+  width: 60%;
+  height: 80%; 
+  display: flex; 
+  justify-content: space-around;
+}
 
-form{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    border: 1px solid #4e4c4c;
-    border-radius: 10px;
-    width: 750px;
-    padding: 25px;
-    background: rgb(255, 255, 255);
-  }
+.container1{
+  //border: 5px solid pink;
+   width : 80%; 
+   height : 100%;
+}
 
-  label{
-    position: relative;
-    font-family: 'Times New Roman', Times, serif;
-    color: rgb(92, 88, 88);
-    font-size: 15px;
-    pointer-events: none;
-    left: 20px;
-    top: -28px;
-  }
+.heading{
+  // border: 1px solid orange; 
+  width: 80%;
+  height: 12%;
+  padding-top: 10%;
+}
 
-  .line{
-    font-size: 15px;
-    margin: 20px 8px;
-    color: #4971f6;
-    display: inline-block;
-    font-family: arial rounded mt;
-  }
+.line{
+  // border: 1px solid orange; 
+  width: 80%;
+  height: 12%;
+  font-size: 24px;
+}
 
-  input[type="submit"]{
-    background:  #4971f6;
-    color: #fff;
-    border: none;
-    padding:10px 30px;
-    border-radius: 5px;
-    margin:  40px 0 30px 180px;
-    cursor: pointer;
-    font-size: 15px;
-  }
- 
+.name{
+  //border: 1px solid orange; 
+  width: 85%;
+  height: 10%;
+}
+
+.username{
+   //border: 1px solid orange;
+   width: 83%;
+   height: 12%;
+}
+
+.line1{
+   //border: 1px solid orange;
+   width: 80%;
+   height: 10%;
+}
+
+.paswrd{
+  //border: 1px solid orange;
+  width: 85%;
+  height: 10%;
+}
+
+.checkbox{
+  width: 80%;
+  height: 10%;
+}
+
+.line2{
+  //border: 1px solid orange; 
+  width: 80%;
+  height: 10%;
+}
+
+.bottom{
+ // border: 1px solid orange; 
+  width: 85%;
+  height: 30%;
+}
+
+.container{
+ // border: 1px solid green; 
+  width : 40%; 
+  height : 100%;
+}
+

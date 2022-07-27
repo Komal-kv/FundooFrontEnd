@@ -1,0 +1,49 @@
+.Outerdiv{
+    border: 0px solid rgb(255, 253, 253);
+    height: 99vh;
+    width: 99vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main{
+    border: 1px solid grey; 
+    border-radius: 4px;
+    width: 370px ;
+    height: 360px; 
+    display: flex; 
+    justify-content: space-around;
+    // padding: 3px 3px 3px 3px;
+  }
+
+  .container1{
+    //border: 5px solid pink;
+    width: 300px ;
+    height: 360px; 
+  }
+
+  .heading{
+    //border: 1px solid orange; 
+    width: 300px;
+    height: 66px;
+    padding-top: 7%;
+  }
+
+  .line{
+    //border: 1px solid orange; 
+    width: 300px;
+    height: 44px;
+  }
+
+  .username{
+    //border: 1px solid orange; 
+    width: 320px;
+    height: 66px;
+  }
+
+  .bottom{
+    //border: 1px solid orange; 
+    width: 300px;
+    height: 180px;
+  }

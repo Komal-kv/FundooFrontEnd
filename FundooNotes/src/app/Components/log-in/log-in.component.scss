@@ -1,16 +1,62 @@
-mat-form-field.mat-form-field {
-    font-size: 14px;
-  }
+.Outerdiv{
+  border: 0px solid rgb(255, 253, 253);
+  height: 99vh;
+  width: 99vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  form{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    border: 1px solid #4e4c4c;
-    border-radius: 10px;
-    width: 450px;
-    height: 500px;
-    padding: 25px;
-    background: rgb(255, 255, 255);
-  }
+.main{
+  border: 1px solid grey; 
+  border-radius: 4px;
+  width: 400px ;
+  height: 390px; 
+  display: flex; 
+  justify-content: space-around;
+  // padding: 3px 3px 3px 3px;
+}
+
+.container1{
+  //border: 5px solid pink;
+  width: 300px ;
+  height: 390px; 
+}
+
+.heading{
+  //border: 1px solid orange; 
+  width: 300px;
+  height: 66px;
+  padding-top: 7%;
+}
+
+.line{
+  //border: 1px solid orange; 
+  width: 300px;
+  height: 66px;
+}
+
+.line1{
+  //border: 1px solid orange; 
+  width: 300px;
+  height: 122px;
+}
+
+.username{
+  //border: 1px solid orange; 
+  width: 300px;
+  height: 66px;
+}
+
+.line3{
+ //border: 1px solid orange; 
+  width: 300px;
+  height: 155px;
+}
+
+.bottom{
+   //border: 1px solid orange; 
+   width: 400px;
+   height: 180px;
+ }
+
