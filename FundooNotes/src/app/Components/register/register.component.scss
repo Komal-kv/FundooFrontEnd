@@ -1,85 +1,33 @@
 .Outerdiv{
-  border: 0px solid rgb(255, 253, 253);
-  height: 99vh;
-  width: 99vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+   
+  // margin: 30px 22%;
+  padding: 30px;
+ 
+  
 }
-
 .main{
-  border: 1px solid grey; 
-  border-radius: 4px;
-  width: 60%;
-  height: 80%; 
-  display: flex; 
-  justify-content: space-around;
-}
-
-.container1{
-  //border: 5px solid pink;
-   width : 80%; 
-   height : 100%;
+  border: 1px solid grey;
+  border-radius: 7px;
+  padding: 20px;
+  padding-bottom: 7%;
 }
 
 .heading{
-  // border: 1px solid orange; 
-  width: 80%;
-  height: 12%;
-  padding-top: 10%;
-}
-
-.line{
-  // border: 1px solid orange; 
-  width: 80%;
-  height: 12%;
-  font-size: 24px;
-}
-
-.name{
-  //border: 1px solid orange; 
-  width: 85%;
-  height: 10%;
-}
-
-.username{
-   //border: 1px solid orange;
-   width: 83%;
-   height: 12%;
+  font-size: 32px; 
+  font-style: inherit;
 }
 
 .line1{
-   //border: 1px solid orange;
-   width: 80%;
-   height: 10%;
-}
-
-.paswrd{
-  //border: 1px solid orange;
-  width: 85%;
-  height: 10%;
-}
-
-.checkbox{
-  width: 80%;
-  height: 10%;
+ margin-bottom: 20px;
 }
 
 .line2{
-  //border: 1px solid orange; 
-  width: 80%;
-  height: 10%;
-}
-
-.bottom{
- // border: 1px solid orange; 
-  width: 85%;
-  height: 30%;
+margin-bottom: 20px;
 }
 
 .container{
- // border: 1px solid green; 
-  width : 40%; 
-  height : 100%;
+  padding-left: 20px;
 }
-
+mat-form-field.mat-form-field {
+  font-size: 14px;
+}
