@@ -1,42 +1,40 @@
-<div class="Outerdiv">
-    <div class="main">
-        <div class="container1" fxLayout="column" fxLayoutAlign="space-around center">
+<div class="Outerdiv" fxLayout="column" fxLayoutAlign="center center" fxFlex>
+    <div class="container">
+        <div fxLayout="column" fxLayoutAlign="center center">
 
-            <div class="heading" fxLayout="column" fxLayoutAlign="space-between center">
-                <h3 style="font-size: 24px; font-style: inherit;">
-                    <span style="color: rgb(9, 137, 196)">F</span>
-                    <span style="color: rgb(216, 65, 65)">u</span>
-                    <span style="color: rgb(219, 154, 32)">n</span>
-                    <span style="color: rgb(209, 26, 117)">d</span>
-                    <span style="color: rgb(142, 151, 14)">o</span>
-                    <span style="color: rgb(39, 193, 78)">o</span>
-                    <span style="color: rgb(14, 197, 213)">N</span>
-                    <span style="color: rgb(203, 78, 15)">o</span>
-                    <span style="color: rgb(22, 111, 99)">t</span>
-                    <span style="color: rgb(102, 9, 164)">e</span>
-                </h3>
-            </div>
+            <h3 class="heading">
+                <span style="color: rgb(9, 137, 196)">F</span>
+                <span style="color: rgb(216, 65, 65)">u</span>
+                <span style="color: rgb(219, 154, 32)">n</span>
+                <span style="color: rgb(209, 26, 117)">d</span>
+                <span style="color: rgb(142, 151, 14)">o</span>
+                <span style="color: rgb(39, 193, 78)">o</span>
+                <span style="color: rgb(14, 197, 213)">N</span>
+                <span style="color: rgb(203, 78, 15)">o</span>
+                <span style="color: rgb(22, 111, 99)">t</span>
+                <span style="color: rgb(102, 9, 164)">e</span>
+            </h3>
 
-            <div class="line" fxLayout="column" fxLayoutAlign="space-between center">
-                <p style="font-size: 28px; font-family: roboto,Noto Sans Myanmar UI,arial,sans-serif;">Find your email</p>
-            </div>
+            <h2 style="margin-top: -18px;">Find your email</h2>
+            <span style="font-size: 16px; ">Enter your phone number or recovery email</span>
 
-            <div class="line1" fxLayout="column" fxLayoutAlign="space-between center">
-                <p style="font-size: 15px; font-family: Google Sans,Noto Sans Myanmar UI,arial,sans-serif;">Enter your phone number or recovery email</p>
-            </div>
+        </div>
 
-            <div class="username" fxLayout="row" fxLayoutAlign="space-between center">
-                <mat-form-field appearance="outline" style="width: 420px;">
-                    <mat-label>Email</mat-label>
-                    <input matInput placeholder="Email">
+        <form [formGroup]="forgotemailForm" (ngSubmit)="onSubmit()">
+
+            <div fxLayout="column" fxLayoutAlign="center start" style="margin-top:30px;">
+                <mat-form-field appearance="outline">
+                    <mat-label>Phone number or email</mat-label>
+                    <input  formControlName="email" matInput placeholder="" />
+                    <mat-error>Enter email or phone number</mat-error>
                 </mat-form-field>
             </div>
 
-            <div class="bottom" fxLayout="column" fxLayoutAlign="space-between end">
-                <button  mat-raised-button color="primary" >Next</button>
+            <div fxLayout="row" fxLayoutAlign="end end">
+                <button mat-raised-button color="primary" >Next</button>
             </div>
+            
 
-
-        </div>
+        </form>
     </div>
 </div>

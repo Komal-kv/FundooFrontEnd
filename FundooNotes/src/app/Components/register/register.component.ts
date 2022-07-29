@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from 'src/app/Services/userservice/user.service';
 
 @Component({
   selector: 'app-register',
@@ -11,16 +12,17 @@ export class RegisterComponent implements OnInit {
   submitted = false;
   
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private user: UserService) { }
 
   ngOnInit() : void {
     this.registerForm = this.formBuilder.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
+      FirstName: ['', Validators.required],
+      LastName: ['', Validators.required],
+      Email: ['', [Validators.required, Validators.email]],
+      Password: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', Validators.required],
     });
+   
 
     }
    
@@ -31,15 +33,28 @@ export class RegisterComponent implements OnInit {
         this.submitted = true;
 
         // stop here if form is invalid
-        if (this.registerForm.invalid) {
-            return;
+        if (this.registerForm.valid) {
+          console.log("valid data", this.registerForm.value);
+          let data={
+
+            "firstName":this.registerForm.value.FirstName,
+            "lastName": this.registerForm.value.LastName,
+            "email":this.registerForm.value.Email,
+            "password":this.registerForm.value.Password,
+            
+          }
+          this.user.register(data).subscribe((result:any)=>{
+            console.log("register response ======",result);
+          })
+
+
+          }
+        else{
+          console.log("invalid data", this.registerForm.value);
         }
 
-    }
 
-    onReset() {
-        this.submitted = false;
-        this.registerForm.reset();
+
     }
 
  }

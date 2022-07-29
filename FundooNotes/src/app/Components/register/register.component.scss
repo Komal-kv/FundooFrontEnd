@@ -13,7 +13,7 @@
 }
 
 .heading{
-  font-size: 32px; 
+  font-size: 30px; 
   font-style: inherit;
 }
 
@@ -26,7 +26,10 @@ margin-bottom: 20px;
 }
 
 .container{
+  //border: 1px solid orange;
   padding-left: 20px;
+  width: 300px;
+  
 }
 mat-form-field.mat-form-field {
   font-size: 14px;

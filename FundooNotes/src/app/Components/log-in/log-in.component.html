@@ -1,9 +1,9 @@
-<div class="Outerdiv">
-    <div class="main">
-        <div class="container1" fxLayout="column" fxLayoutAlign="space-around center">
+<div class="Outerdiv" fxLayout="column" fxLayoutAlign="center center" fxFlex>
+    <div class="main" fxLayout="column" fxLayoutAlign="center center">
+        <div class="container">
 
-            <div class="heading" fxLayout="column" fxLayoutAlign="space-between center">
-                <h3 style="font-size: 26px; font-style: inherit;">
+            <div fxLayout="column" fxLayoutAlign="center center">
+                <h3 class="heading">
                     <span style="color: rgb(9, 137, 196)">F</span>
                     <span style="color: rgb(216, 65, 65)">u</span>
                     <span style="color: rgb(219, 154, 32)">n</span>
@@ -15,33 +15,41 @@
                     <span style="color: rgb(22, 111, 99)">t</span>
                     <span style="color: rgb(102, 9, 164)">e</span>
                 </h3>
-            </div>
-            
-            <div class="line" fxLayout="column" fxLayoutAlign="space-between center">
-                <p style="font-size: 24px; font-family: Google Sans,Noto Sans Myanmar UI,arial,sans-serif;">Sign In</p>
-            </div>
 
-            <div class="line1" fxLayout="column" fxLayoutAlign="space-between center">
-                <p style="font-size: 20px; font-family: Google Sans,Noto Sans Myanmar UI,arial,sans-serif;">Use your Google Account</p>
+                <h2 style="margin-top: -18px;">Sign in</h2>
+                <span style="font-size: 17px; ">Use your Google Account</span>
             </div>
 
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
-            <div class="username" fxLayout="row" fxLayoutAlign="space-between center">
-                <mat-form-field appearance="outline" style="width: 420px;">
-                    <mat-label>Username</mat-label>
-                    <input matInput placeholder="Username">
-                </mat-form-field>
-            </div>
+                <div fxLayout="column" fxLayoutAlign="start center">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input formControlName="email" matInput placeholder="" />
+                        <mat-error>Enter your email</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input formControlName="password" matInput placeholder="" />
+                        <mat-error>Enter your correct password</mat-error>
+                    </mat-form-field>
+                </div>
 
-            <div class="line3" fxLayout="column" fxLayoutAlign="space-between start">
-                <button routerLink="/forgotEmail" mat-button color="primary" >Forgot email</button>
-            </div>
+                <div class="button" fxLayout="column" fxLayoutAlign="space-between start">
+                    <button routerLink="/forgotEmail" mat-button color="primary">Forgot email?</button>
+                </div>
 
-            <div class="bottom" fxLayout="row" fxLayoutAlign="space-around center">
-                <button routerLink="/register"mat-button color="primary">Create Account</button>
-                <button  mat-raised-button color="primary" >Next</button>
-            </div>
+                <div class="line" fxLayout="column" fxLayoutAlign="center start">
+                    <mat-hint>Not your computer? Use Guest mode to sign in privately.</mat-hint>
+                    <a href="https://support.google.com/chrome/answer/6130773?hl=en">Learn more</a>
+                </div>
 
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <button routerLink="/register" mat-button color="primary">Create account</button>
+                    <button mat-raised-button color="primary">Next</button>
+                </div>
+
+            </form>
         </div>
     </div>
 </div>

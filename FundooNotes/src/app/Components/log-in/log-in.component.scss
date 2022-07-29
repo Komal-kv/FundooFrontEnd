@@ -1,62 +1,32 @@
-.Outerdiv{
-  border: 0px solid rgb(255, 253, 253);
-  height: 99vh;
-  width: 99vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
+.Outerdiv{ 
+  padding: 35px;
+ 
+}
 .main{
-  border: 1px solid grey; 
-  border-radius: 4px;
-  width: 400px ;
-  height: 390px; 
-  display: flex; 
-  justify-content: space-around;
-  // padding: 3px 3px 3px 3px;
-}
 
-.container1{
-  //border: 5px solid pink;
-  width: 300px ;
-  height: 390px; 
+border: 1px solid grey;
+border-radius: 7px;
+padding: 20px;
+padding-bottom: 10%;
 }
 
 .heading{
-  //border: 1px solid orange; 
-  width: 300px;
-  height: 66px;
-  padding-top: 7%;
+  font-size: 20px; 
+  font-style: inherit;
 }
 
-.line{
-  //border: 1px solid orange; 
-  width: 300px;
-  height: 66px;
+.line a{
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-decoration: none;
 }
 
-.line1{
-  //border: 1px solid orange; 
-  width: 300px;
-  height: 122px;
+.button button{
+  margin-top: 10px;
 }
 
-.username{
-  //border: 1px solid orange; 
-  width: 300px;
-  height: 66px;
+mat-form-field.mat-form-field {
+  font-size: 14px;
+  width: 100%;
 }
-
-.line3{
- //border: 1px solid orange; 
-  width: 300px;
-  height: 155px;
-}
-
-.bottom{
-   //border: 1px solid orange; 
-   width: 400px;
-   height: 180px;
- }
-

@@ -1,4 +1,4 @@
-<div class="Outerdiv" fxLayout="column" fxLayoutAlign="center center" fxFlex>
+<div class="Outerdiv" fxLayout="column" fxLayoutAlign="center center" >
     <div class="main" fxLayout="row" fxLayoutAlign="center center">
         <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <div class="container1">
@@ -18,18 +18,18 @@
 
                 </div>
                 <div class="line1">
-                    <span style="font-size: 20px;">Create your Google account</span>
+                    <span style="font-size: 22px;">Create your Google account</span>
                 </div>
 
                 <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column">
                     <mat-form-field appearance="outline">
                         <mat-label>First Name</mat-label>
-                        <input formControlName="firstName" matInput placeholder="" />
+                        <input formControlName="FirstName" matInput placeholder="" />
                         <mat-error>Enter your first name</mat-error>
                     </mat-form-field>
                     <mat-form-field appearance="outline">
                         <mat-label>Last Name</mat-label>
-                        <input formControlName="lastName" matInput placeholder="" />
+                        <input formControlName="LastName" matInput placeholder="" />
                         <mat-error>Enter your last name</mat-error>
                     </mat-form-field>
                 </div>
@@ -37,9 +37,13 @@
                 <div fxLayout="column" fxLayoutAlign="center ">
                     <mat-form-field appearance="outline">
                         <mat-label>Username</mat-label>
-                        <input formControlName="email" matInput placeholder="" />
+                        <input formControlName="Email" matInput placeholder="" />
                         <mat-error>Enter your Email</mat-error>
                     </mat-form-field>
+                </div>
+
+                <div class="line2">
+                    <mat-hint>You can use letters, numbers & periods</mat-hint>
                 </div>
 
                 <a mat-button color="primary">Use my current email address instead</a>
@@ -47,7 +51,7 @@
                 <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column">
                     <mat-form-field appearance="outline">
                         <mat-label>Password</mat-label>
-                        <input formControlName="password" matInput placeholder="" />
+                        <input formControlName="Password" matInput placeholder="" />
                         <mat-error>Enter your password</mat-error>
                     </mat-form-field>
                     <mat-form-field appearance="outline">
@@ -58,7 +62,7 @@
                 </div>
 
                 <div class="line2">
-                    <mat-hint>You can use letters, numbers & periods</mat-hint>
+                    <mat-hint>Use 8 or more characters with a mix of letters, numbers & symbols</mat-hint>
                 </div>
 
                 <div>
@@ -75,7 +79,8 @@
 
         <div class="container" fxLayout="column" fxHide.xs="true">
             <img src="../../../assets/Google_signup.svg" alt="img" />
-            <span style="text-align: center;">One account. All of Google working for you.</span>
+            <p style="text-align: center;">One account. All of Google</p>
+            <p style="text-align: center;"> working for you.</p>
         </div>
 
     </div>
