@@ -18,10 +18,36 @@ export class UserService {
       })
     }
 
-   return this.http.postservice('https://localhost:44386/User/Register', data, false, header)
+   return this.http.postservice(`https://localhost:44386/User/Register`, data, false, header)
   }
 
-  login(){
+  login(data : any){
+    let header ={
+      headers : new HttpHeaders({
+        'content-type': 'application/json'
+      })
+    }
 
+    return this.http.postservice(`https://localhost:44386/User/LogIn/${data.email}/${data.password}`, { }, false, header)
+  }
+
+  forgotemail(data : any){
+    let header ={
+      headers : new HttpHeaders({
+        'content-type': 'application/json'
+      })
+    }
+
+    return this.http.postservice(`https://localhost:44386/User/Forgotpassword/${data.email}`, { }, false, header)
+  }
+
+  forgotpassword(data : any){
+    let header ={
+      headers : new HttpHeaders({
+        'content-type': 'application/json'
+      })
+    }
+
+    return this.http.putservice(`https://localhost:44386/User/Resetpassword`, data, false, header)
   }
 }

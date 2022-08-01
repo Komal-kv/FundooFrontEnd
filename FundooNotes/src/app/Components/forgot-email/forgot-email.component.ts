@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from 'src/app/Services/userservice/user.service';
 
 @Component({
   selector: 'app-forgot-email',
@@ -10,7 +11,7 @@ export class ForgotEmailComponent implements OnInit {
   forgotemailForm!: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private user : UserService) { }
 
   ngOnInit(): void {
     this.forgotemailForm = this.formBuilder.group({
@@ -18,19 +19,24 @@ export class ForgotEmailComponent implements OnInit {
     })
   }
 
-  onSubmit() {
+  onSubmit() {   
     this.submitted = true;
 
     // stop here if form is invalid
-    if (this.forgotemailForm.invalid) {
-      return;
+    if (this.forgotemailForm.valid) {
+      console.log("valid data", this.forgotemailForm.value);
+      let data={
+        "email" : this.forgotemailForm.value.email
+      }
+      this.user.forgotemail(data).subscribe((rup :any)=>{
+          console.log("email request ====== ", rup);
+      })
+
+    }
+    else{
+      console.log("invalid data", this.forgotemailForm.value);
     }
 
-  }
-
-  onReset() {
-    this.submitted = false;
-    this.forgotemailForm.reset();
   }
 
 }

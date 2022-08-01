@@ -19,7 +19,7 @@ export class RegisterComponent implements OnInit {
       FirstName: ['', Validators.required],
       LastName: ['', Validators.required],
       Email: ['', [Validators.required, Validators.email]],
-      Password: ['', [Validators.required, Validators.minLength(6)]],
+      Password: ['', [Validators.required, Validators.minLength(5)]],
       confirmPassword: ['', Validators.required],
     });
    
@@ -40,23 +40,18 @@ export class RegisterComponent implements OnInit {
             "firstName":this.registerForm.value.FirstName,
             "lastName": this.registerForm.value.LastName,
             "email":this.registerForm.value.Email,
-            "password":this.registerForm.value.Password,
+            "password":this.registerForm.value.Password
             
           }
           this.user.register(data).subscribe((result:any)=>{
             console.log("register response ======",result);
           })
 
-
           }
         else{
           console.log("invalid data", this.registerForm.value);
         }
-
-
-
     }
-
  }
 
 
