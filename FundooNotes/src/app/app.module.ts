@@ -4,7 +4,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {FormsModule} from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './Components/register/register.component';
@@ -16,6 +15,19 @@ import {MatInputModule} from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ForgotEmailComponent } from './Components/forgot-email/forgot-email.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.component';
+import { ArchiveComponent } from './Components/archive/archive.component';
+import { TrashComponent } from './Components/trash/trash.component';
+import { CreateNoteComponent } from './Components/create-note/create-note.component';
+import { IconsComponent } from './Components/icons/icons.component';
+import { DisplayComponent } from './Components/display/display.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -23,7 +35,14 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterComponent,
     LogInComponent,
     ForgotPasswordComponent,
-    ForgotEmailComponent
+    ForgotEmailComponent,
+    DashboardComponent,
+    GetAllNotesComponent,
+    ArchiveComponent,
+    TrashComponent,
+    CreateNoteComponent,
+    IconsComponent,
+    DisplayComponent
   ],
   imports: [
     BrowserModule,
@@ -34,9 +53,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
-    MatInputModule,
-    FlexLayoutModule,
-    HttpClientModule
+    MatInputModule,MatCardModule,MatExpansionModule,
+    FlexLayoutModule,MatIconModule,
+    HttpClientModule, MatSidenavModule, MatToolbarModule,MatListModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]
