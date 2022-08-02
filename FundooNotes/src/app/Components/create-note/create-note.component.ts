@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { NoteService } from 'src/app/Services/noteservice/note.service';
 
 @Component({
   selector: 'app-create-note',
@@ -6,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-note.component.scss']
 })
 export class CreateNoteComponent implements OnInit {
+  @Output() messageEvent = new EventEmitter<any>();
   isShow = false;
+  title:any;
+  description:any;
 
-  constructor() { }
+  constructor(private note : NoteService) { }
 
   ngOnInit(): void {
   }
@@ -19,6 +23,17 @@ export class CreateNoteComponent implements OnInit {
 
   close(){
     this.isShow = false;
+    console.log(this.title, this.description);
+    let data ={
+      title:this.title,
+      description:this.description
+    }
+
+    this.note.addNote(data).subscribe((res :any)=>{
+      console.log(res);
+      this.messageEvent.emit(res)
+      
+    })
   }
 
 }

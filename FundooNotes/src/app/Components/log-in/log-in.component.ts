@@ -31,7 +31,8 @@ export class LogInComponent implements OnInit {
         "password": this.loginForm.value.password
       }
       this.user.login(data).subscribe((res: any)=>{
-          console.log("login response =====", res);
+          console.log("token : ", res.data);
+          localStorage.setItem("token", res.data)
       })
     }
     else{

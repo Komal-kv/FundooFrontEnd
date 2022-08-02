@@ -27,7 +27,7 @@ import { CreateNoteComponent } from './Components/create-note/create-note.compon
 import { IconsComponent } from './Components/icons/icons.component';
 import { DisplayComponent } from './Components/display/display.component';
 import {MatCardModule} from '@angular/material/card';
-import {MatExpansionModule} from '@angular/material/expansion';
+
 
 @NgModule({
   declarations: [
@@ -53,7 +53,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
-    MatInputModule,MatCardModule,MatExpansionModule,
+    MatInputModule,MatCardModule,
     FlexLayoutModule,MatIconModule,
     HttpClientModule, MatSidenavModule, MatToolbarModule,MatListModule, 
   ],

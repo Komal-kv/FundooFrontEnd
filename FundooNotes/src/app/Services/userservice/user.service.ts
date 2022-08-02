@@ -41,13 +41,13 @@ export class UserService {
     return this.http.postservice(`https://localhost:44386/User/Forgotpassword/${data.email}`, { }, false, header)
   }
 
-  forgotpassword(data : any){
-    let header ={
-      headers : new HttpHeaders({
-        'content-type': 'application/json'
-      })
-    }
+  // forgotpassword(data : any){
+  //   let header ={
+  //     headers : new HttpHeaders({
+  //       'content-type': 'application/json'
+  //     })
+  //   }
 
-    return this.http.putservice(`https://localhost:44386/User/Resetpassword`, data, false, header)
-  }
+  //   return this.http.putservice(`https://localhost:44386/User/Resetpassword`, data, false, header)
+  // }
 }

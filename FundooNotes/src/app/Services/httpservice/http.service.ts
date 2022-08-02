@@ -14,12 +14,11 @@ export class HttpService {
     
   }
 
-  putservice(url:string, data: any, token: boolean=false, httpOption :any){
-    
-    return this.httpClient.put(url, data, token && httpOption)
+  getservice(url:string, token: boolean=false, httpOption :any){
+    return this.httpClient.post(url, token && httpOption)
   }
 
-  getservice(){
+  putservice(){
     
   }
 

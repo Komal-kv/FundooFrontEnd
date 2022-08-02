@@ -16,6 +16,8 @@
   
   h1.example-app-name {
     margin-left: 8px;
+    font-family:Product Sans,Arial,sans-serif; 
+    font-size: 22px;
   }
   
   .example-sidenav-container {
@@ -29,4 +31,44 @@
        `<body>` to be our scrolling element for mobile layouts. */
     flex: 1 0 auto;
   }
+
+  .logo{
+    width: 30px; height:40px;
+  }
   
+  .searchdiv{
+    width: 50%;
+    margin-left: 70px;
+  }
+  #search {
+    opacity: 0.8;
+  }
+  .search {
+    border-radius: 10%;
+    width: 50%;
+    background: rgba(0, 0, 0, 0.02);
+  }
+  .settingbtn{
+    margin-left: 20px;
+    padding-left: 0%;
+    border:none;
+   
+  }
+  .icon{
+    display: flex;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+  }
+  .icon:hover{
+    background-color: rgba(245, 243, 241, 0.925);
+    cursor: pointer;
+  }
+  .icon > img{
+    height: 25px;
+    margin-top: 5px;
+  }
+  .pic img{
+    width: 20px;
+     height:20px;
+  }
