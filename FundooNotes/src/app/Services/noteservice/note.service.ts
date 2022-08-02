@@ -18,7 +18,7 @@ export class NoteService {
     let header ={
       headers : new HttpHeaders({
         'content-type': 'application/json',
-        'Authorization': this.token
+        'Authorization': 'bearer ' + this.token
       })
   }
   return this.httpservice.postservice(`https://localhost:44386/Note/AddNote`, data, true, header)
@@ -30,7 +30,7 @@ getallnotes(){
   let header ={
     headers : new HttpHeaders({
       'content-type': 'application/json',
-      'Authorization': this.token
+      'Authorization': 'bearer ' + this.token
     })
 }
 return this.httpservice.getservice(`https://localhost:44386/Note/GetAllNote`, true, header)

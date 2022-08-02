@@ -6,8 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./display.component.scss']
 })
 export class DisplayComponent implements OnInit {
-  @Input() childMessage: any;
-  
+   @Input() childMessage: any;
+ 
   constructor() { }
 
   ngOnInit(): void {

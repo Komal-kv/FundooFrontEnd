@@ -1,12 +1,7 @@
-<div class="Outerdiv" *ngFor="let note of childMessage">
-    <div class="main">
-        <mat-card>
-            <h3>{{note.title}}</h3>
-            <p>{{note.Description}}</p>
-            <div fxLayout="row" fxLayoutAlign="space-between center">
-                <app-icons></app-icons>
-                <!-- <button mat-button>Close</button> -->
-            </div>
-        </mat-card>
+<div *ngFor="let note of childMessage">
+    <div style="border: 1px solid grey; width: 230px;">
+        <h3>{{note.title}}</h3>
+        <p>{{note.description}}</p>
+        <app-icons></app-icons>
     </div>
 </div>

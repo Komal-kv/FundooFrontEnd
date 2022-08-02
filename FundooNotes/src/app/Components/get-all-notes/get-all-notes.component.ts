@@ -9,14 +9,14 @@ import { NoteService } from 'src/app/Services/noteservice/note.service';
 export class GetAllNotesComponent implements OnInit {
   parentMessage:any;
 
-  constructor(private note :NoteService ) { }
+  constructor( private note :NoteService) { }
 
   ngOnInit(): void {
     this.getNotes()
   }
   getNotes(){
     this.note.getallnotes().subscribe((res:any)=>{
-      console.log(res.data.data);
+      console.log(res);
       this.parentMessage = res.data.data;
     })
   }

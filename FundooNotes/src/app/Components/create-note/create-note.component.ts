@@ -11,6 +11,7 @@ export class CreateNoteComponent implements OnInit {
   isShow = false;
   title:any;
   description:any;
+  
 
   constructor(private note : NoteService) { }
 
@@ -26,7 +27,8 @@ export class CreateNoteComponent implements OnInit {
     console.log(this.title, this.description);
     let data ={
       title:this.title,
-      description:this.description
+      description:this.description,
+      colour:"white"
     }
 
     this.note.addNote(data).subscribe((res :any)=>{
