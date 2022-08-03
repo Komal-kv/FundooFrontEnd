@@ -27,6 +27,7 @@ import { CreateNoteComponent } from './Components/create-note/create-note.compon
 import { IconsComponent } from './Components/icons/icons.component';
 import { DisplayComponent } from './Components/display/display.component';
 import {MatCardModule} from '@angular/material/card';
+import { UpdateComponent } from './Components/update/update.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import {MatCardModule} from '@angular/material/card';
     TrashComponent,
     CreateNoteComponent,
     IconsComponent,
-    DisplayComponent
+    DisplayComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,

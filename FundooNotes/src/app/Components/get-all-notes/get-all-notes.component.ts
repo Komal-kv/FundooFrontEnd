@@ -16,8 +16,8 @@ export class GetAllNotesComponent implements OnInit {
   }
   getNotes(){
     this.note.getallnotes().subscribe((res:any)=>{
-      console.log(res);
-      this.parentMessage = res.data.data;
+      console.log(res.data);
+      this.parentMessage = res.data;
     })
   }
 

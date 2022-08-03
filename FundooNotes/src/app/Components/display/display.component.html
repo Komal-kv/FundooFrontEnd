@@ -1,7 +1,10 @@
-<div *ngFor="let note of childMessage">
-    <div style="border: 1px solid grey; width: 230px;">
-        <h3>{{note.title}}</h3>
-        <p>{{note.description}}</p>
+<div class="main" fxLayout="row" fxLayout="row wrap" fxFlex=100>
+    <mat-card class="note" *ngFor="let note of childMessage" fxFlex.xs="90">
+        <div (click)="openDialog(note)">
+            <div fxLayout="row" fxLayoutAlign="space-between">{{note.title}}</div>
+            <div class="desc">{{note.description}}</div>
+            <br>
+        </div>
         <app-icons></app-icons>
-    </div>
+    </mat-card>
 </div>
