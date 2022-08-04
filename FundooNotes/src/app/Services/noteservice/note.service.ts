@@ -36,4 +36,17 @@ getallnotes(){
 return this.httpservice.getservice(`https://localhost:44386/Note/GetAllNote`, true, header)
 }
 
+updatenote(data: any, noteId:any) {
+  console.log(this.token);
+
+  let header = {
+    headers: new HttpHeaders({    
+      'Content-Type': 'application/json',
+      'Authorization' : 'bearer ' + this.token,
+    }),
+  };
+  return this.httpservice.putservice( `https://localhost:44386/Note/UpdateNote/${noteId}`, data, true, header );
+}
+
+
 }

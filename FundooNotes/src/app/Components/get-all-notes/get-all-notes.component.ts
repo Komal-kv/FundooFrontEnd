@@ -18,6 +18,7 @@ export class GetAllNotesComponent implements OnInit {
     this.note.getallnotes().subscribe((res:any)=>{
       console.log(res.data);
       this.parentMessage = res.data;
+      this.parentMessage.reverse();
     })
   }
 
@@ -25,5 +26,12 @@ export class GetAllNotesComponent implements OnInit {
     console.log(event);
     this.getNotes();
   }
+
+  receiveMessagefromdisplaycard(event: any) {
+    console.log("inside note", event);
+    this.getNotes()
+  }
+
+
 
 }

@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {Inject} from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { UpdateComponent } from '../update/update.component';
+import { DialogComponent } from '../dialog/dialog.component';
+
 
 @Component({
   selector: 'app-display',
@@ -17,8 +18,8 @@ export class DisplayComponent implements OnInit {
   }
 
   openDialog(note:any): void {
-    const dialogRef = this.dialog.open(UpdateComponent, {
-      width: '250px',
+    const dialogRef = this.dialog.open(DialogComponent, {
+      width: 'auto', height : 'auto',
       data: note,
     });
 

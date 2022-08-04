@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
@@ -19,7 +19,6 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
-import {MatIconModule} from '@angular/material/icon';
 import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.component';
 import { ArchiveComponent } from './Components/archive/archive.component';
 import { TrashComponent } from './Components/trash/trash.component';
@@ -27,6 +26,9 @@ import { CreateNoteComponent } from './Components/create-note/create-note.compon
 import { IconsComponent } from './Components/icons/icons.component';
 import { DisplayComponent } from './Components/display/display.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatIconModule} from '@angular/material/icon';
+import { DialogComponent } from './Components/dialog/dialog.component';
 import { UpdateComponent } from './Components/update/update.component';
 
 
@@ -44,6 +46,7 @@ import { UpdateComponent } from './Components/update/update.component';
     CreateNoteComponent,
     IconsComponent,
     DisplayComponent,
+    DialogComponent,
     UpdateComponent
   ],
   imports: [
@@ -56,8 +59,8 @@ import { UpdateComponent } from './Components/update/update.component';
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,MatCardModule,
-    FlexLayoutModule,MatIconModule,
-    HttpClientModule, MatSidenavModule, MatToolbarModule,MatListModule, 
+    FlexLayoutModule,MatDialogModule,
+    HttpClientModule, MatSidenavModule, MatToolbarModule,MatListModule,MatIconModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
