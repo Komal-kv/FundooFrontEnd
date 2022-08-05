@@ -1,8 +1,39 @@
-<div fxLayout="row" fxLayoutAlign="space-between center" style="width: 220px;">
-    <img src="../../../assets/add_alert_FILL0_wght400_GRAD0_opsz48.svg" style="width:20px; height: 20px;" alt="bell">
-    <img src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg" style="width:20px; height: 20px;" alt="">
-    <img src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg" style="width:20px; height: 20px;" alt="">
-    <img src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg" style="width:20px; height: 20px;" alt="">
-    <img src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" style="width:20px; height: 20px;" alt="">
-    <img src="../../../assets/more_vert_FILL0_wght400_GRAD0_opsz48.svg" style="width:20px; height: 20px;" alt="">
+<div fxLayout="row" fxLayoutAlign="space-around center" class="icons">
+    <button mat-icon-button matTooltip="Remind me">
+        <img src="../../../assets/add_alert_FILL0_wght400_GRAD0_opsz48.svg" alt="bell" />
+    </button>
+    <button mat-icon-button matTooltip="collaborator">
+        <img src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg" alt="person" />
+    </button>
+    <button mat-icon-button matTooltip="Color">
+        <img src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg" alt="color" />
+    </button>
+    <button mat-icon-button matTooltip="image">
+        <img src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg" alt="image" />
+    </button>
+    <button mat-icon-button matTooltip="archive">
+        <img src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" alt="archi" />
+    </button>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon><img src="../../../assets/more_vert_FILL0_wght400_GRAD0_opsz48.svg" alt=""></mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+            <span>Delete note</span>
+        </button>
+        <button mat-menu-item>
+            <span>Add label</span>
+        </button>
+        <button mat-menu-item>
+            <span>Add drawing</span>
+        </button>
+        <button mat-menu-item>
+            <span>Make a copy</span>
+        </button>
+        <button mat-menu-item>
+            <span>Show checkboxex</span>
+        </button>
+    </mat-menu>
+
 </div>

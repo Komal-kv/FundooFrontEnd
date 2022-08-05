@@ -28,8 +28,9 @@ import { DisplayComponent } from './Components/display/display.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatIconModule} from '@angular/material/icon';
-import { DialogComponent } from './Components/dialog/dialog.component';
 import { UpdateComponent } from './Components/update/update.component';
+import {MatMenuModule} from '@angular/material/menu';
+
 
 
 @NgModule({
@@ -46,8 +47,8 @@ import { UpdateComponent } from './Components/update/update.component';
     CreateNoteComponent,
     IconsComponent,
     DisplayComponent,
-    DialogComponent,
     UpdateComponent
+  
   ],
   imports: [
     BrowserModule,
@@ -59,7 +60,7 @@ import { UpdateComponent } from './Components/update/update.component';
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,MatCardModule,
-    FlexLayoutModule,MatDialogModule,
+    FlexLayoutModule,MatDialogModule,MatMenuModule,
     HttpClientModule, MatSidenavModule, MatToolbarModule,MatListModule,MatIconModule 
   ],
   providers: [],

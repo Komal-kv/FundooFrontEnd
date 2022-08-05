@@ -38,7 +38,8 @@ return this.httpservice.getservice(`https://localhost:44386/Note/GetAllNote`, tr
 
 updatenote(data: any, noteId:any) {
   console.log(this.token);
-
+  console.log(noteId);
+  
   let header = {
     headers: new HttpHeaders({    
       'Content-Type': 'application/json',
@@ -48,5 +49,45 @@ updatenote(data: any, noteId:any) {
   return this.httpservice.putservice( `https://localhost:44386/Note/UpdateNote/${noteId}`, data, true, header );
 }
 
+getAllNotesservice() {
+
+
+  let header = {
+    headers: new HttpHeaders({
+      'Content-type': 'application/json',
+      'Authorization':  'bearer ' + this.token		
+    })
+
+  }
+  
+  return this.httpservice.getservice(`https://localhost:44386/Note/GetAllNote`,true,header)
+  
+}
+
+archiveNote(data: any, noteId:any){
+  console.log(this.token);
+  console.log(noteId);
+
+  let header = {
+    headers: new HttpHeaders({    
+      'Content-Type': 'application/json',
+      'Authorization' : 'bearer ' + this.token,
+    }),
+  };
+  return this.httpservice.putservice(`https://localhost:44386/Note/ArchiveNote/${noteId}`,data, true, header);
+}
+
+trashNote(data:any,noteId:any){
+  console.log(this.token);
+  console.log(noteId);
+
+  let header = {
+    headers: new HttpHeaders({    
+      'Content-Type': 'application/json',
+      'Authorization' : 'bearer ' + this.token,
+    }),
+  };
+  return this.httpservice.putservice(`https://localhost:44386/Note/TrashNote/${noteId}`,data, true, header);
+}
 
 }
