@@ -11,8 +11,8 @@
     <button mat-icon-button matTooltip="image">
         <img src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg" alt="image" />
     </button>
-    <button mat-icon-button matTooltip="archive">
-        <img *ngIf="!isTrash && !isArchive" src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" alt="archi" (click)="archieve()" />
+    <button mat-icon-button matTooltip="archive" *ngIf="!isTrash && !isArchive">
+        <img src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" alt="archi" (click)="archieve()" />
     </button>
 
     <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">

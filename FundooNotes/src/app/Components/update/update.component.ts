@@ -12,7 +12,7 @@ export class UpdateComponent implements OnInit {
   title:any;
   description:any;
   colour:any;
-  noteId:any;
+  NoteId:any;
 
   constructor(
     public dialogRef: MatDialogRef<UpdateComponent>,
@@ -20,7 +20,7 @@ export class UpdateComponent implements OnInit {
     this.title = this.data.title;
     this.description = this.data.description;
     this.colour = this.data.colour;
-    this.noteId = this.data.noteId;
+    this.NoteId = this.data.NoteId;
    }
 
   ngOnInit(): void {
@@ -39,7 +39,7 @@ export class UpdateComponent implements OnInit {
       colour: "white",
     }
     console.log(data);
-    this.note.updatenote(data,this.noteId).subscribe((res :any)=>{
+    this.note.updatenote(data,this.NoteId).subscribe((res :any)=>{
       console.log("note updated", res);
       this.onNoClick();
       this.updatedisplay.emit(res)
