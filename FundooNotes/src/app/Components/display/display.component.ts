@@ -33,7 +33,7 @@ export class DisplayComponent implements OnInit {
     });
   }
 
-  //this is for archive note
+  //this is for archive note nd trash
   recieveArchiveNote(event:any){
     this.archivenote.emit(event);
   }
