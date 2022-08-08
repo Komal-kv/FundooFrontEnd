@@ -46,7 +46,7 @@ updatenote(data: any, NoteId:any) {
       'Authorization' : 'bearer ' + this.token,
     }),
   };
-  return this.httpservice.putservice( `https://localhost:44386/Note/UpdateNote/${NoteId}`, data, true, header );
+  return this.httpservice.putservice( `https://localhost:44386/Note/UpdateNote?noteId=${NoteId}`, data, true, header );
 }
 
 getAllNotesservice() {
@@ -88,6 +88,19 @@ trashNote(data:any,NoteId:any){
     }),
   };
   return this.httpservice.putservice(`https://localhost:44386/Note/TrashNote?NoteId=${NoteId}`, { }, true, header);
+}
+
+ColorNote(data:any,NoteId:any){
+  console.log(this.token);
+  console.log(NoteId);
+
+  let header = {
+    headers: new HttpHeaders({    
+      'Content-Type': 'application/json',
+      'Authorization' : 'bearer ' + this.token,
+    }),
+  };
+  return this.httpservice.putservice(`https://localhost:44386/Note/ColorChangeNote?noteId=${NoteId}`, { }, true, header);
 }
 
 }

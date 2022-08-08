@@ -20,6 +20,10 @@ export class GetAllNotesComponent implements OnInit {
       console.log(res.data);
       this.parentMessage = res.data;
       this.parentMessage.reverse();
+      this.parentMessage = this.parentMessage.filter((object: any) => {
+        return object.isTrash=== false && object.isArchive === false
+       
+      })
     });
   }
 

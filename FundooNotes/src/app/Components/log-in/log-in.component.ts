@@ -18,6 +18,7 @@ export class LogInComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(5)]],
     })
+
   }
 
   onSubmit() {

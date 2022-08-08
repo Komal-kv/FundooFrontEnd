@@ -39,7 +39,7 @@ export class UpdateComponent implements OnInit {
       colour: "white",
     }
     console.log(data);
-    this.note.updatenote(data,this.NoteId).subscribe((res :any)=>{
+    this.note.updatenote(data,this.data.noteId).subscribe((res :any)=>{
       console.log("note updated", res);
       this.onNoClick();
       this.updatedisplay.emit(res)

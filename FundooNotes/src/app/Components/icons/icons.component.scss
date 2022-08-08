@@ -6,3 +6,18 @@
 .icons {
     width: 225px;
 }
+
+.palette {
+    background-color: transparent;
+    border: none;
+}
+
+.pop{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: white;
+    max-width: 170px;
+    margin-left: 5px;
+   
+  }

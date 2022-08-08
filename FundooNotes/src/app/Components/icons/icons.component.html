@@ -1,26 +1,40 @@
 <div fxLayout="row" fxLayoutAlign="space-around center" class="icons">
-    <button mat-icon-button matTooltip="Remind me">
-        <img src="../../../assets/add_alert_FILL0_wght400_GRAD0_opsz48.svg" alt="bell" />
+    <button mat-icon-button matTooltip="Reminder">
+        <img *ngIf="!isTrash && !isArchive" src="../../../assets/add_alert_FILL0_wght400_GRAD0_opsz48.svg" alt="Reminder" />
     </button>
-    <button mat-icon-button matTooltip="collaborator">
-        <img src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg" alt="person" />
+    <button mat-icon-button matTooltip="Collaborator">
+        <img *ngIf="!isTrash && !isArchive" src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg" alt="Collaborator" />
     </button>
-    <button mat-icon-button matTooltip="Color">
-        <img src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg" alt="color" />
+    <button mat-icon-button matTooltip="Colour" class="palette">
+        <img [matMenuTriggerFor]="aboveMenu" *ngIf="!isTrash && !isArchive" src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg" alt="Colour" />
+        <mat-menu #aboveMenu="matMenu" yPosition="below">
+            <div class="pop">
+                <div *ngFor='let color of colorarray'>
+                    <button style="background-color: transparent;border: none;width: 40px;height: 40px;border-radius: 100%;"
+                        [style.background]="color?.Colorcode" (click)="ColorNote(color?.Colorcode)">
+    
+                    </button>
+                </div>
+            </div>
+        </mat-menu>
     </button>
-    <button mat-icon-button matTooltip="image">
-        <img src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg" alt="image" />
+    <button mat-icon-button matTooltip="Image">
+        <img *ngIf="!isTrash && !isArchive" src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg" alt="Image" />
     </button>
-    <button mat-icon-button matTooltip="archive" *ngIf="!isTrash && !isArchive">
-        <img src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" alt="archi" (click)="archieve()" />
+    <button mat-icon-button matTooltip="Archive" (click)="archieve()">
+        <img *ngIf="!isTrash && !isArchive" src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" alt="Archive"/>
     </button>
 
+    <!-- <button mat-icon-button matTooltip="UnArchive" >
+        <img *ngIf="isArchive" src="../../../assets/unarchive_FILL0_wght400_GRAD0_opsz48.svg" alt="unarchive">
+    </button> -->
+
     <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-        <mat-icon><img src="../../../assets/more_vert_FILL0_wght400_GRAD0_opsz48.svg" alt=""></mat-icon>
+        <mat-icon><img *ngIf="!isTrash && !isArchive" src="../../../assets/more_vert_FILL0_wght400_GRAD0_opsz48.svg" alt=""></mat-icon>
     </button>
     <mat-menu #menu="matMenu">
         <button mat-menu-item>
-            <span *ngIf="!isTrash" (click)="Trashnote()">Delete note</span>
+            <span *ngIf="!isTrash && !isArchive" (click)="Trashnote()">Delete note</span>
         </button>
         <button mat-menu-item>
             <span>Add label</span>

@@ -30,7 +30,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatIconModule} from '@angular/material/icon';
 import { UpdateComponent } from './Components/update/update.component';
 import {MatMenuModule} from '@angular/material/menu';
-
+import { AuthserviceService } from './Services/authservice/authservice.service';
+import { MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 
@@ -61,10 +62,10 @@ import {MatMenuModule} from '@angular/material/menu';
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,MatCardModule,
-    FlexLayoutModule,MatDialogModule,MatMenuModule,
+    FlexLayoutModule,MatDialogModule,MatMenuModule,MatSnackBarModule,
     HttpClientModule, MatSidenavModule, MatToolbarModule,MatListModule,MatIconModule 
   ],
-  providers: [],
+  providers: [AuthserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
