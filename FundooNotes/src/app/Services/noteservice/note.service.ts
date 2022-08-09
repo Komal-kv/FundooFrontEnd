@@ -103,4 +103,17 @@ ColorNote(data:any,NoteId:any){
   return this.httpservice.putservice(`https://localhost:44386/Note/ColorChangeNote?noteId=${NoteId}`, { }, true, header);
 }
 
+DeleteNote(data:any,NoteId:any){
+  console.log(this.token);
+  console.log(NoteId);
+
+  let header = {
+    headers: new HttpHeaders({    
+      'Content-Type': 'application/json',
+      'Authorization' : 'bearer ' + this.token,
+    }),
+  };
+  return this.httpservice.deleteservice(`https://localhost:44386/Note/DeleteNote?NoteId=${NoteId}`, true, header);
+}
+
 }

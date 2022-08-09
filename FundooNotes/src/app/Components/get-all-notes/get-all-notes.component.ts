@@ -39,6 +39,7 @@ export class GetAllNotesComponent implements OnInit {
     this.getNotes();
   }
 
+  //this one is for archive and trash note
   recieveArchiveNote(event :any){
     console.log(event);
     this.getNotes();

@@ -24,7 +24,8 @@ export class HttpService {
     return this.httpClient.put(url, data, token && httpOption)
   }
 
-  deleteservice(){
+  deleteservice(url:string, token: boolean=false, httpOption :any){
     
+    return this.httpClient.delete(url,  token && httpOption)
   }
 }

@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import {Inject} from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { DataService } from 'src/app/Services/dataservice/data.service';
 import { UpdateComponent } from '../update/update.component';
 
 
@@ -13,11 +14,13 @@ export class DisplayComponent implements OnInit {
    @Input() childMessage: any;  //input decorator to allow the data to be passed via templates(child componenet.ts)
    @Output() updatedisplay = new EventEmitter<any>();
    @Output() archivenote = new EventEmitter<any>();
-
+   message:any;
+   subscription: any;
  
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog,private data:DataService) { }
 
   ngOnInit(): void {
+    this.subscription = this.data.currentMessage.subscribe(message => this.message = message)
   }
 
   openDialog(note:any): void {
@@ -38,9 +41,9 @@ export class DisplayComponent implements OnInit {
     this.archivenote.emit(event);
   }
 
-  //this is for update note
-  operation(value: any) {
-    this.updatedisplay.emit(value);
+  //this is for update , whenever we make changes
+  operation(event: any) {
+    this.updatedisplay.emit(event);
   }
 
 }
