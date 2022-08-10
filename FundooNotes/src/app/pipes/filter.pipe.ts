@@ -5,19 +5,30 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(value: any, searchString:any) {
-    if (value.length === 0 || searchString == '') {
-      return value;
-    }
+  transform(value: any,filterString?:any){
+    console.log(value,filterString);
 
-    const searchResult = [];
-    for(const note of value){
-      if(note.title.toLowerCase().includes(searchString.toLowerCase()) || 
-      note.description.toLowerCase().includes(searchString.toLowerCase())){
-        searchResult.push(note);
-      }
+    if(!filterString ){
+      return value;
+    }else{
+      filterString=filterString.toLocaleLowerCase();
     }
-    return searchResult;
+    return value.filter((note:any) =>{
+      return note.title.toLocaleLowerCase().includes(filterString) | note.description.toLocaleLowerCase().includes(filterString);
+      
+    })
+
+    // if(value.length === 0 || filterString === ''){
+    //   return value
+    // }
+    // const notes = [ ];
+    // for(const note of value){
+    //   if(note['title'] == filterString || note['description'] == filterString){
+    //     notes.push(note)
+    //   }
+    // }
+    // return notes;
   }
 
-}
+  }
+

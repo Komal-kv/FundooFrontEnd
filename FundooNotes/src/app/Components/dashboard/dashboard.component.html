@@ -14,10 +14,11 @@
           <mat-icon id="search" matTooltip="Search">search</mat-icon>
         </button>
 
-        <input fxFlex="50" matInput placeholder="Search" [(ngModel)]="searchString" (searchkey)=" searchNote($event)" [style.fontSize.px]="18" class="search-window"
-          autocomplete="off" type="type=" text />
+        <input fxFlex="50" matInput placeholder="Search" [(ngModel)]="filterString" [style.fontSize.px]="18" (keyup)="onekeyup($event)" class="search-window"
+          autocomplete="off" type="text" />
       </mat-form-field>
     </div>
+    
 
     <div fxFlex="20" class="settingbtn" div fxLayout="row" fxLayoutAlign="end end">
       <button mat-icon-button aria-label="refresh button">

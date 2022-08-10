@@ -14,11 +14,13 @@ export class IconsComponent implements OnInit {
   isTrash: boolean = false;
   isArchive: boolean = false;
   @Input() notedata: any;
-  @Input() colornote: any;
   @Output() displayicons = new EventEmitter<string>();
+  @Output() colornote = new EventEmitter<any>(); 
+ 
+
 
   colorarray = [{ Colorcode: "Red" }, { Colorcode: "Orange" }, { Colorcode: "Yellow" }, { Colorcode: "Green" },
-  { Colorcode: "Pink" }, { Colorcode: "Brown" }, { Colorcode: "Gray" }, { Colorcode: "Purple" },
+  { Colorcode: "Pink" }, { Colorcode: "Brown" }, { Colorcode: "Gray" }, { Colorcode: "White" },
   { Colorcode: "Indigo" }, { Colorcode: "fuchsia" }, { Colorcode: "lightcoral" }, { Colorcode: "lime" }];
 
   constructor(private note: NoteService, private activatedroute: ActivatedRoute, private sanv: MatSnackBar) { }
@@ -65,15 +67,15 @@ export class IconsComponent implements OnInit {
   }
 
   ColorNote(color: any) {
-    console.log(this.colornote);
-    this.colornote.color = color;
-    let data = {
+    console.log(this.notedata);
+    this.notedata.colour = color;
+    let data = {  
       colour: color
     };
     console.log('Note is colored');
-    this.note.ColorNote(data, this.colornote.noteId).subscribe((res: any) => {
+    this.note.ColorNote(data, this.notedata.noteId).subscribe((res: any) => {
       console.log('Color note :', res);
-      this.displayicons.emit(res);
+      this.colornote.emit(res);
       this.sanv.open('Color note successfully', '', {
         duration: 3000,
       })

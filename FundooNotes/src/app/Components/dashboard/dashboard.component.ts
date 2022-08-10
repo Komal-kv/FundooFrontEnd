@@ -13,13 +13,16 @@ export class DashboardComponent implements OnDestroy {
 
   mobileQuery: MediaQueryList;
   token:any;
-  searchString:any='';
   message:any;
   subscription: any;
+  filterString:any;
+
+
+ 
 
   private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher,private snav:MatSnackBar, private router: Router,private data: DataService) {
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher,private snav:MatSnackBar, private router: Router,private data:DataService) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
@@ -31,6 +34,7 @@ export class DashboardComponent implements OnDestroy {
 
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
+    //this.subscription.unsubscribe();  
   }
 
   logout()
@@ -42,10 +46,9 @@ export class DashboardComponent implements OnDestroy {
     })
   }
 
-  searchNote(event:any){
-    this.search=event.target.value
-    this.filterDataService.changeMessage(event.target.value)
+  onekeyup(text:any){
+    this.data.changeMessage(text.target.value);
+    console.log(this.filterString);
   }
-
 
 }

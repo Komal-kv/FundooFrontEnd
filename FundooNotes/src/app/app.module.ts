@@ -32,7 +32,7 @@ import { UpdateComponent } from './Components/update/update.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { AuthserviceService } from './Services/authservice/authservice.service';
 import { MatSnackBarModule} from '@angular/material/snack-bar';
-import { FilterPipe } from './pipes/filter.pipe';
+import { FilterPipe } from './Pipes/filter.pipe';
 
 
 

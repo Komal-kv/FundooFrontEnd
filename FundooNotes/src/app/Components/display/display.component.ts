@@ -14,13 +14,18 @@ export class DisplayComponent implements OnInit {
    @Input() childMessage: any;  //input decorator to allow the data to be passed via templates(child componenet.ts)
    @Output() updatedisplay = new EventEmitter<any>();
    @Output() archivenote = new EventEmitter<any>();
+   @Output() colornote = new EventEmitter<any>(); 
+   filterString:any;
    message:any;
    subscription: any;
+
  
-  constructor(public dialog: MatDialog,private data:DataService) { }
+  constructor(public dialog: MatDialog, private data:DataService) { }
 
   ngOnInit(): void {
-    this.subscription = this.data.currentMessage.subscribe(message => this.message = message)
+    this.subscription = this.data.currentMessage.subscribe(message => {this.message = message;
+      console.log(this.message);
+    })
   }
 
   openDialog(note:any): void {
@@ -44,6 +49,11 @@ export class DisplayComponent implements OnInit {
   //this is for update , whenever we make changes
   operation(event: any) {
     this.updatedisplay.emit(event);
+    
+  }
+
+  getcolornote(event:any){
+    this.colornote.emit(event)
   }
 
 }
