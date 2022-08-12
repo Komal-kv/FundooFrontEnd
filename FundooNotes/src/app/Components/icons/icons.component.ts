@@ -72,12 +72,13 @@ export class IconsComponent implements OnInit {
     console.log(this.notedata);
     this.notedata.colour = colour;
     let data = {  
-      colour: colour
+      colour: colour,
+      noteId:this.notedata.noteId
     };
     console.log('Note is colored');
-    this.note.ColorNote(data, this.notedata.noteId, colour).subscribe((res: any) => {
+    this.note.ColorNote(data).subscribe((res: any) => {
       console.log('Color note :', res);
-      this.colornote.emit(colour);
+      this.colornote.emit(res);
       this.sanv.open('Color note successfully', '', {
         duration: 3000,
       })

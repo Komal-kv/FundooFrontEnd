@@ -90,11 +90,9 @@ trashNote(data:any,NoteId:any){
   return this.httpservice.putservice(`https://localhost:44386/Note/TrashNote?NoteId=${NoteId}`, { }, true, header);
 }
 
-ColorNote(data:any,NoteId:any,colour:any){
+ColorNote(data:any){
   console.log(this.token);
-  console.log(NoteId);
-  console.log(colour);
-  
+  console.log(data);
 
   let header = {
     headers: new HttpHeaders({    
@@ -102,7 +100,7 @@ ColorNote(data:any,NoteId:any,colour:any){
       'Authorization' : 'bearer ' + this.token,
     }),
   };
-  return this.httpservice.putservice(`https://localhost:44386/Note/ColorChangeNote?noteId=${NoteId}`, { }, true, header);
+  return this.httpservice.putservice(`https://localhost:44386/Note/ColorChangeNote?noteId=${data.noteId}`, data, true, header);
 }
 
 DeleteNote(data:any,NoteId:any){
