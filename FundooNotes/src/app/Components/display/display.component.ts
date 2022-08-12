@@ -18,6 +18,7 @@ export class DisplayComponent implements OnInit {
    filterString:any;
    message:any;
    subscription: any;
+   isGrid:any = true;
 
  
   constructor(public dialog: MatDialog, private data:DataService) { }
@@ -25,12 +26,15 @@ export class DisplayComponent implements OnInit {
   ngOnInit(): void {
     this.subscription = this.data.currentMessage.subscribe(message => {this.message = message;
       console.log(this.message);
+     })
+     this.data.gridList.subscribe((flag)=>{this.isGrid=flag;
+      console.log(this.isGrid)
     })
   }
 
   openDialog(note:any): void {
     const dialogRef = this.dialog.open(UpdateComponent, {
-      width: 'auto', height : 'auto',
+      width: 'auto',
       data: note,
     });
 
@@ -53,7 +57,7 @@ export class DisplayComponent implements OnInit {
   }
 
   getcolornote(event:any){
-    this.colornote.emit(event)
+    this.colornote.emit(event);
   }
 
 }

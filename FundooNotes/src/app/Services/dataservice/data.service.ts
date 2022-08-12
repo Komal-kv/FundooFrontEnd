@@ -8,6 +8,8 @@ export class DataService {
 
   private messageSource = new BehaviorSubject(' ');
   currentMessage = this.messageSource.asObservable();
+  private isGrid = new BehaviorSubject(true);
+  gridList = this.isGrid.asObservable();
   
   constructor() { }
 
@@ -15,4 +17,7 @@ export class DataService {
     this.messageSource.next(message)
   }
 
+  changeView(flag: boolean){
+    this.isGrid.next(flag)
+  }
 }

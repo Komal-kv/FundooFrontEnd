@@ -10,7 +10,7 @@
     <mat-menu #aboveMenu="matMenu" yPosition="below">
         <div class="pop">
             <div *ngFor='let color of colorarray'>
-                <button [style.background]="color.Colorcode" (click)="ColorNote(color.Colorcode)"></button>
+                <button [style.background]="color?.Colorcode" (click)="ColorNote(color?.Colorcode)"></button>
             </div>
         </div>
     </mat-menu>

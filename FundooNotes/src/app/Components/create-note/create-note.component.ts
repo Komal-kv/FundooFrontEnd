@@ -12,7 +12,7 @@ export class CreateNoteComponent implements OnInit {
   title:any;
   description:any;
   
-
+  
   constructor(private note : NoteService) { }
 
   ngOnInit(): void {
@@ -28,7 +28,7 @@ export class CreateNoteComponent implements OnInit {
     let data ={
       title:this.title,
       description:this.description,
-      colour:"white",
+      colour:"white"
     }
 
     this.note.addNote(data).subscribe((res :any)=>{

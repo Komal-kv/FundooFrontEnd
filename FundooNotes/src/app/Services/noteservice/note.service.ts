@@ -90,9 +90,11 @@ trashNote(data:any,NoteId:any){
   return this.httpservice.putservice(`https://localhost:44386/Note/TrashNote?NoteId=${NoteId}`, { }, true, header);
 }
 
-ColorNote(data:any,NoteId:any){
+ColorNote(data:any,NoteId:any,colour:any){
   console.log(this.token);
   console.log(NoteId);
+  console.log(colour);
+  
 
   let header = {
     headers: new HttpHeaders({    

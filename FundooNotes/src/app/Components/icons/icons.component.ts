@@ -36,6 +36,8 @@ export class IconsComponent implements OnInit {
       console.log(this.isArchive);
     }
 
+    console.log("notedata", this.notedata);
+    
   }
 
   archieve() {
@@ -66,16 +68,16 @@ export class IconsComponent implements OnInit {
     });
   }
 
-  ColorNote(color: any) {
+  ColorNote(colour: any) {
     console.log(this.notedata);
-    this.notedata.colour = color;
+    this.notedata.colour = colour;
     let data = {  
-      colour: color
+      colour: colour
     };
     console.log('Note is colored');
-    this.note.ColorNote(data, this.notedata.noteId).subscribe((res: any) => {
+    this.note.ColorNote(data, this.notedata.noteId, colour).subscribe((res: any) => {
       console.log('Color note :', res);
-      this.colornote.emit(res);
+      this.colornote.emit(colour);
       this.sanv.open('Color note successfully', '', {
         duration: 3000,
       })

@@ -8,17 +8,17 @@ export class FilterPipe implements PipeTransform {
   transform(value: any,filterString?:any){
     console.log(value,filterString);
 
-    if(!filterString ){
-      return value;
-    }else{
-      filterString=filterString.toLocaleLowerCase();
-    }
-    return value.filter((note:any) =>{
-      return note.title.toLocaleLowerCase().includes(filterString) | note.description.toLocaleLowerCase().includes(filterString);
-      
-    })
+      if(!filterString ){
+        return value;
+      }else{
+        filterString=filterString.toLocaleLowerCase();
+      }
+      return value.filter((note:any) =>{
+        return note.title.toLocaleLowerCase().includes(filterString) | note.description.toLocaleLowerCase().includes(filterString);
+        
+      })
 
-    // if(value.length === 0 || filterString === ''){
+    // if(value.length === 0 || filterString.length === 0){
     //   return value
     // }
     // const notes = [ ];

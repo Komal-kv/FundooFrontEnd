@@ -8,7 +8,7 @@ import { NoteService } from 'src/app/Services/noteservice/note.service';
 })
 export class TrashComponent implements OnInit {
 
-  res:any;
+  result:any;
   constructor(private note :NoteService) { }
 
   ngOnInit(): void {
@@ -18,9 +18,9 @@ export class TrashComponent implements OnInit {
   trashNote(){
     this.note.getAllNotesservice().subscribe((resp:any)=>{
       console.log(resp.data);
-      this.res = resp.data;
-      this.res.reverse();
-      this.res = this.res.filter((object: any) => {
+      this.result = resp.data;
+      this.result.reverse();
+      this.result = this.result.filter((object: any) => {
         return object.isTrash === true;
       });
     })

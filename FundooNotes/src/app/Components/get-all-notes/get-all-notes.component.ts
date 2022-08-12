@@ -44,4 +44,10 @@ export class GetAllNotesComponent implements OnInit {
     console.log(event);
     this.getNotes();
   }
+
+  getcolornote(event:any){
+    console.log(event);
+    this.getNotes();
+    
+  }
 }
