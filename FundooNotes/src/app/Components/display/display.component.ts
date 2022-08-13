@@ -34,7 +34,7 @@ export class DisplayComponent implements OnInit {
 
   openDialog(note:any): void {
     const dialogRef = this.dialog.open(UpdateComponent, {
-      width: 'auto',
+      width: 'auto', 
       data: note,
     });
 
@@ -48,12 +48,6 @@ export class DisplayComponent implements OnInit {
   //this is for archive note nd trash
   recieveArchiveNote(event:any){
     this.archivenote.emit(event);
-  }
-
-  //this is for update , whenever we make changes
-  operation(event: any) {
-    this.updatedisplay.emit(event);
-    
   }
 
   getcolornote(event:any){

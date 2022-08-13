@@ -8,7 +8,8 @@ import { NoteService } from 'src/app/Services/noteservice/note.service';
 })
 export class GetAllNotesComponent implements OnInit {
   parentMessage: any; //relation between parent to child (parent component.ts)
- 
+
+  
   constructor(private note: NoteService) {}
 
   ngOnInit(): void {
@@ -45,6 +46,7 @@ export class GetAllNotesComponent implements OnInit {
     this.getNotes();
   }
 
+  //this for giving color to note
   getcolornote(event:any){
     console.log(event);
     this.getNotes();

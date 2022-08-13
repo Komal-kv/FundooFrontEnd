@@ -19,9 +19,9 @@ export class IconsComponent implements OnInit {
  
 
 
-  colorarray = [{ Colorcode: "Red" }, { Colorcode: "Orange" }, { Colorcode: "Yellow" }, { Colorcode: "Green" },
-  { Colorcode: "Pink" }, { Colorcode: "Brown" }, { Colorcode: "Gray" }, { Colorcode: "White" },
-  { Colorcode: "Indigo" }, { Colorcode: "fuchsia" }, { Colorcode: "lightcoral" }, { Colorcode: "lime" }];
+  colorarray = [{ Colorcode: "DeepSkyBlue" }, { Colorcode: "Orange" }, { Colorcode: "Yellow" }, { Colorcode: "SpringGreen" },
+  { Colorcode: "Pink" }, { Colorcode: "Cornsilk" }, { Colorcode: "Gainsboro" }, { Colorcode: "White" },
+  { Colorcode: "HotPink" }, { Colorcode: "fuchsia" }, { Colorcode: "lightcoral" }, { Colorcode: "Aquamarine" }];
 
   constructor(private note: NoteService, private activatedroute: ActivatedRoute, private sanv: MatSnackBar) { }
 

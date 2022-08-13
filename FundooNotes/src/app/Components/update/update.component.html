@@ -7,7 +7,7 @@
             <input type="text" placeholder="take a notes" [(ngModel)]="description">
         </div>
         <div fxLayout="row" fxLayoutAlign="space-between center">
-            <app-icons></app-icons>
+            <app-icons [notedata]="data" (colornote)="getcolornote($event)"></app-icons>
             <button (click)="onSubmit()" mat-button>Close</button>
         </div>
     </div>

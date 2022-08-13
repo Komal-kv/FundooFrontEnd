@@ -9,7 +9,7 @@ import { NoteService } from 'src/app/Services/noteservice/note.service';
 })
 export class UpdateComponent implements OnInit {
   @Output() updatedisplay = new EventEmitter<any>();  //this is child to parent sharing using two way binding data where we use output decorator (child component.ts)
-
+  @Output() colornote = new EventEmitter<any>();
   title:any;
   description:any;
   colour:any;
