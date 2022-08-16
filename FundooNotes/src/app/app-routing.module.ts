@@ -8,7 +8,11 @@ import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.c
 import { LogInComponent } from './Components/log-in/log-in.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { TrashComponent } from './Components/trash/trash.component';
-import {AuthGuardGuard} from './auth-guard.guard'
+import {AuthGuardGuard} from './auth-guard.guard';
+import { ParentComponent } from './Components/parent/parent.component';
+import { SiblingComponent } from './Components/sibling/sibling.component';
+import { ChildComponent } from './Components/child/child.component';
+
 
 
 const routes: Routes = [
@@ -17,6 +21,9 @@ const routes: Routes = [
   {path : 'login', component : LogInComponent},
   {path : 'forgotpassword', component : ForgotPasswordComponent},
   {path : 'forgotEmail', component : ForgotEmailComponent},
+  {path: 'parent', component:ParentComponent},
+  {path: 'child', component:ChildComponent},
+  {path : 'sibling', component:SiblingComponent},
   {path : 'Dashboard', component : DashboardComponent,canActivate:[AuthGuardGuard],  
 children:[
   {path:'notes', component : GetAllNotesComponent},

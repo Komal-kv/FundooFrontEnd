@@ -33,7 +33,7 @@ export class UpdateComponent implements OnInit {
   }
 
   onSubmit(){
-    //console.log(this.title, this.description);
+    console.log(this.title, this.description);
     let data ={
       title:this.title,
       description:this.description,
@@ -50,6 +50,7 @@ export class UpdateComponent implements OnInit {
   getcolornote(event:any){
     console.log(event);
     this.colour=event;
+    //this.onNoClick();
   }
 
   }

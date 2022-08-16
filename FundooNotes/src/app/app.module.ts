@@ -33,7 +33,9 @@ import {MatMenuModule} from '@angular/material/menu';
 import { AuthserviceService } from './Services/authservice/authservice.service';
 import { MatSnackBarModule} from '@angular/material/snack-bar';
 import { FilterPipe } from './Pipes/filter.pipe';
-
+import { ParentComponent } from './Components/parent/parent.component';
+import { SiblingComponent } from './Components/sibling/sibling.component';
+import { ChildComponent } from './Components/child/child.component';
 
 
 @NgModule({
@@ -51,7 +53,10 @@ import { FilterPipe } from './Pipes/filter.pipe';
     IconsComponent,
     DisplayComponent,
     UpdateComponent,
-    FilterPipe
+    FilterPipe,
+    ParentComponent,
+    SiblingComponent,
+    ChildComponent
   
   ],
   imports: [
