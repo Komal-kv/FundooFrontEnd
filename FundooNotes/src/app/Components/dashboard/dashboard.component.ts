@@ -53,6 +53,7 @@ export class DashboardComponent implements OnDestroy {
     this.gridView=true;
     this.data.changeView(this.gridView)
   }
+  
   list(){
     this.gridView=false;
     this.data.changeView(this.gridView)

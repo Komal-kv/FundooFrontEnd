@@ -12,21 +12,25 @@ export class DataService {
   private isGrid = new BehaviorSubject(true);
   gridList = this.isGrid.asObservable();
 
-  private printmsg = new BehaviorSubject('default message ');
-  print = this.printmsg.asObservable();
+  private printmsg = new BehaviorSubject('');
+  recievedMessage = this.printmsg.asObservable();
   
   constructor() { }
 
+  //for search function
   changeMessage(message: string) {
     this.messageSource.next(message)
   }
 
+  //for changing grid to list view
   changeView(flag: boolean){
     this.isGrid.next(flag)
   }
 
-  demoView(message : string){
+  //practice purpose
+  demoView(message : any){
     this.printmsg.next(message)
   }
+
 
 }

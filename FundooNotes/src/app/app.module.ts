@@ -35,7 +35,7 @@ import { MatSnackBarModule} from '@angular/material/snack-bar';
 import { FilterPipe } from './Pipes/filter.pipe';
 import { ParentComponent } from './Components/parent/parent.component';
 import { SiblingComponent } from './Components/sibling/sibling.component';
-import { ChildComponent } from './Components/child/child.component';
+import { DemoComponent } from './Components/demo/demo.component';
 
 
 @NgModule({
@@ -56,7 +56,7 @@ import { ChildComponent } from './Components/child/child.component';
     FilterPipe,
     ParentComponent,
     SiblingComponent,
-    ChildComponent
+    DemoComponent,
   
   ],
   imports: [

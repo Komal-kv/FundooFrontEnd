@@ -1,4 +1,5 @@
-<div *ngFor="let num of numArray">
-    <button (click)="newMessage">Next</button>
+<p>Sibling Component</p>
+<div *ngFor="let note of message">
+    <p>{{note.name}}</p>
 </div>
 

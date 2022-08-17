@@ -11,19 +11,22 @@ import { TrashComponent } from './Components/trash/trash.component';
 import {AuthGuardGuard} from './auth-guard.guard';
 import { ParentComponent } from './Components/parent/parent.component';
 import { SiblingComponent } from './Components/sibling/sibling.component';
-import { ChildComponent } from './Components/child/child.component';
+import { DemoComponent } from './Components/demo/demo.component';
 
 
 
 const routes: Routes = [
   {path : 'register', component : RegisterComponent},
-  {path:'', redirectTo:"/login", pathMatch:'full'},
+  {path :'', redirectTo:"/login", pathMatch:'full'},
   {path : 'login', component : LogInComponent},
   {path : 'forgotpassword', component : ForgotPasswordComponent},
   {path : 'forgotEmail', component : ForgotEmailComponent},
-  {path: 'parent', component:ParentComponent},
-  {path: 'child', component:ChildComponent},
-  {path : 'sibling', component:SiblingComponent},
+  {path : 'demo', component : DemoComponent},
+
+  {path : 'parent', component:ParentComponent ,
+  children:[ {path : 'sibling', component:SiblingComponent} ]
+  },
+  
   {path : 'Dashboard', component : DashboardComponent,canActivate:[AuthGuardGuard],  
 children:[
   {path:'notes', component : GetAllNotesComponent},
