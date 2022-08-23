@@ -1,0 +1,27 @@
+<h2>Parent Component</h2>
+
+<!-- this is for child to parent -->
+<!-- <div>
+    <app-demo2 (messageEvent)="receiveMessage($event)"></app-demo2>
+    <p>Message: {{message}}</p>
+</div> -->
+
+
+
+<!-- this for parent to child sharing -->
+<app-demo2 [childMessage]="parentMessage"></app-demo2>
+
+
+
+<!-- this for parent to child and child to parent sharing -->
+
+<!-- <div class="card-body">
+    <form>
+        <div class="order-tracking">
+            <input name="yourname" type="text" [(ngModel)]="name" placeholder="Enter your name" />
+            <button type="button" (click)="submit()" class="btn-btn primary">Submit</button>
+            <h3>{{this.message}}</h3>
+        </div>
+    </form>
+</div>
+<app-demo2 [Name]="sendToChild" (getResponse)="getResponse($event)"></app-demo2>  -->

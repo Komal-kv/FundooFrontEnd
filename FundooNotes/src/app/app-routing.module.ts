@@ -12,6 +12,8 @@ import {AuthGuardGuard} from './auth-guard.guard';
 import { ParentComponent } from './Components/parent/parent.component';
 import { SiblingComponent } from './Components/sibling/sibling.component';
 import { DemoComponent } from './Components/demo/demo.component';
+import { Demo1Component } from './Components/demo1/demo1.component';
+import { Demo2Component } from './Components/demo2/demo2.component';
 
 
 
@@ -22,6 +24,8 @@ const routes: Routes = [
   {path : 'forgotpassword', component : ForgotPasswordComponent},
   {path : 'forgotEmail', component : ForgotEmailComponent},
   {path : 'demo', component : DemoComponent},
+  {path : 'demo1', component : Demo1Component},
+  {path : 'demo2', component : Demo2Component},
 
   {path : 'parent', component:ParentComponent ,
   children:[ {path : 'sibling', component:SiblingComponent} ]

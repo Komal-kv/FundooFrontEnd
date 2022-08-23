@@ -10,8 +10,8 @@ import { DataService } from 'src/app/Services/dataservice/data.service';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnDestroy {
-
   mobileQuery: MediaQueryList;
+    
   token:any;
   message:any;
   subscription: any;

@@ -21,7 +21,7 @@
 
     <div fxLayout="row" fxLayoutAlign="space-between center">
       <div fxLayout="row" >
-        <div class="icon">
+        <div class="icon" fxHide.xs>
           <img src="../../../assets/refresh_FILL0_wght400_GRAD0_opsz48.svg">
         </div>&nbsp;&nbsp;&nbsp;
         <div class="icon" (click)="list()" *ngIf="gridView">
@@ -30,10 +30,10 @@
         <div class="icon" (click)="grid()" *ngIf="!gridView">
           <img src="../../../assets/grid_view_FILL0_wght400_GRAD0_opsz48.svg">
         </div>&nbsp;&nbsp;&nbsp;
-        <div class="icon">
+        <div class="icon" fxHide.xs>
           <img src="../../../assets/settings_FILL0_wght400_GRAD0_opsz48.svg">
         </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <div class="icon">
+        <div class="icon" fxHide.xs>
           <img src="../../../assets/apps_FILL0_wght400_GRAD0_opsz48.svg">
         </div>&nbsp;&nbsp;&nbsp;&nbsp;
         <div (click)="logout()" routerLink="./login" class="icon">

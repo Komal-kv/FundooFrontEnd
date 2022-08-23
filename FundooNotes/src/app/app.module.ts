@@ -36,6 +36,8 @@ import { FilterPipe } from './Pipes/filter.pipe';
 import { ParentComponent } from './Components/parent/parent.component';
 import { SiblingComponent } from './Components/sibling/sibling.component';
 import { DemoComponent } from './Components/demo/demo.component';
+import { Demo1Component } from './Components/demo1/demo1.component';
+import { Demo2Component } from './Components/demo2/demo2.component';
 
 
 @NgModule({
@@ -57,6 +59,8 @@ import { DemoComponent } from './Components/demo/demo.component';
     ParentComponent,
     SiblingComponent,
     DemoComponent,
+    Demo1Component,
+    Demo2Component,
   
   ],
   imports: [
