@@ -22,8 +22,6 @@ export class RegisterComponent implements OnInit {
       Password: ['', [Validators.required, Validators.minLength(5)]],
       confirmPassword: ['', Validators.required],
     });
-   
-
     }
    
     // convenience getter for easy access to form fields
@@ -45,6 +43,7 @@ export class RegisterComponent implements OnInit {
           }
           this.user.register(data).subscribe((result:any)=>{
             console.log("register response ======",result);
+            
           })
 
           }

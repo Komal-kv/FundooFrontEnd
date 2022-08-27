@@ -1,10 +1,9 @@
 <div fxLayout="row" fxLayoutAlign="space-around center" class="icons">
 
     <img *ngIf="!isTrash" src="../../../assets/add_alert_FILL0_wght400_GRAD0_opsz48.svg" alt="Reminder" />
-
-    <img *ngIf="!isTrash" src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg" alt="Collaborator" />
-
-
+    
+    <img (click)="openDialog()" *ngIf="!isTrash" src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg" alt="Collaborator" />
+    
     <img [matMenuTriggerFor]="aboveMenu" *ngIf="!isTrash && !isArchive" class="palette"
         src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg" alt="Colour" />
     <mat-menu #aboveMenu="matMenu" yPosition="below">

@@ -1,0 +1,21 @@
+<div class="main" fxLayout="column" fxLayoutAlign="center start">
+    <div style="font-size: 16px; "><b>Collaborator</b>
+        <hr style="width: 400px;">
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between start" class="title" >
+        <img src="../../../assets/account_circle_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+        <div fxLayout="coloumn" fxLayoutAlign="space-between center">
+            <h4> {{getFullName()}}</h4>
+        </div>&nbsp;  
+        <div>{{email}}</div> 
+    </div>
+    
+    <div fxLayout="row" fxLayoutAlign="space-between start" class="style">
+        <img src="../../../assets/group_add_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+        <input type="text" placeholder="Person or email to share with" [(ngModel)]="CollaboratorEmail">
+    </div>
+</div>
+<div fxLayout="row" fxLayoutAlign="space-between" class="button">
+    <button (click)="close()" mat-raised-button>Cancel</button>
+    <button (click)="onSubmit()" mat-raised-button>Save</button>
+</div>

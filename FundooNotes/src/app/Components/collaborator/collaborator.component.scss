@@ -1,0 +1,53 @@
+.style input {
+    width: 250px;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+
+}
+
+.title input{
+    width: 250px;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    padding-left: 10px;
+}
+
+.title img{
+    padding-left: 10px;
+    width: 28px;
+    height: 28px;
+    padding-top: 10px;
+}
+
+.style img{
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+.main {
+    width: 400px;
+    height: auto;
+}
+
+.style {
+    border-radius: 8px;
+    //border: 1px solid red;
+    width: 300px;
+    padding: -20px;
+}
+
+.button{
+    width:400px;
+    height: 35px;
+    //background-color: rgb(250, 247, 247);
+    //border: 1px solid red;
+    padding-left: 200px;
+}

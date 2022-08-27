@@ -38,6 +38,7 @@ import { SiblingComponent } from './Components/sibling/sibling.component';
 import { DemoComponent } from './Components/demo/demo.component';
 import { Demo1Component } from './Components/demo1/demo1.component';
 import { Demo2Component } from './Components/demo2/demo2.component';
+import { CollaboratorComponent } from './Components/collaborator/collaborator.component';
 
 
 @NgModule({
@@ -61,6 +62,7 @@ import { Demo2Component } from './Components/demo2/demo2.component';
     DemoComponent,
     Demo1Component,
     Demo2Component,
+    CollaboratorComponent
   
   ],
   imports: [

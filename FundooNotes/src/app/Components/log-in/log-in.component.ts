@@ -32,8 +32,13 @@ export class LogInComponent implements OnInit {
         "password": this.loginForm.value.password
       }
       this.user.login(data).subscribe((res: any)=>{
-          console.log("token : ", res.data);
-          localStorage.setItem("token", res.data)
+          console.log("token : ", res);
+          
+          localStorage.setItem("token", res.data);
+          localStorage.setItem("firstName" , res.firstName);
+          localStorage.setItem("lastName", res.lastName);
+          localStorage.setItem("email", res.email);
+
       })
     }
     else{

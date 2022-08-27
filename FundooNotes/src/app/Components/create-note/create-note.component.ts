@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { NoteService } from 'src/app/Services/noteservice/note.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class CreateNoteComponent implements OnInit {
   description:any;
   
   
-  constructor(private note : NoteService) { }
+  constructor(private note : NoteService,  private sanv: MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -33,7 +34,10 @@ export class CreateNoteComponent implements OnInit {
 
     this.note.addNote(data).subscribe((res :any)=>{
       console.log(res);
-      this.messageEvent.emit(res)
+      this.messageEvent.emit(res);
+      this.sanv.open('Created note successfully', '', {
+        duration: 3000,
+      })
       
     })
   }

@@ -4,6 +4,8 @@ import { NoteService } from 'src/app/Services/noteservice/note.service';
 import { TrashComponent } from '../trash/trash.component';
 import { ArchiveComponent } from '../archive/archive.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material/dialog';
+import { CollaboratorComponent } from '../collaborator/collaborator.component';
 
 @Component({
   selector: 'app-icons',
@@ -13,6 +15,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class IconsComponent implements OnInit {
   isTrash: boolean = false;
   isArchive: boolean = false;
+  collaboratorEmail:any;
   @Input() notedata: any;
   @Output() displayicons = new EventEmitter<string>();
   @Output() colornote = new EventEmitter<any>(); 
@@ -23,7 +26,7 @@ export class IconsComponent implements OnInit {
   { Colorcode: "Pink" }, { Colorcode: "Cornsilk" }, { Colorcode: "Gainsboro" }, { Colorcode: "White" },
   { Colorcode: "HotPink" }, { Colorcode: "fuchsia" }, { Colorcode: "lightcoral" }, { Colorcode: "Aquamarine" }];
 
-  constructor(private note: NoteService, private activatedroute: ActivatedRoute, private sanv: MatSnackBar) { }
+  constructor(private note: NoteService, public dialog: MatDialog ,private activatedroute: ActivatedRoute, private sanv: MatSnackBar) { }
 
   ngOnInit(): void {
     let del = this.activatedroute.snapshot.component;
@@ -124,6 +127,17 @@ export class IconsComponent implements OnInit {
       this.sanv.open('Delete note successfully', '', {
         duration: 3000,
       })
+    });
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(CollaboratorComponent, {
+      width: 'auto',
+    });
+    dialogRef.afterClosed().subscribe((result :any) => {
+      console.log('The dialog was closed');
+      this.displayicons.emit(result);
+      
     });
   }
 

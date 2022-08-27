@@ -7,13 +7,21 @@ import { HttpService } from '../httpservice/http.service';
 })
 export class NoteService {
   token:any;
-
+  firstname:any;
+  lastname:any;
+  email:any;
+  
   constructor(private httpservice : HttpService) { 
-    this.token=localStorage.getItem(`token`)
+    this.token=localStorage.getItem(`token`),
+    this.firstname=localStorage.getItem(`firstName`),
+    this.lastname=localStorage.getItem(`lastName`),
+    this.email=localStorage.getItem(`email`)
+   
   }
 
   addNote(data:any){
     console.log(this.token);
+    console.log(this.firstname);
     
     let header ={
       headers : new HttpHeaders({
